@@ -1,0 +1,584 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body{
+    background: #0c0f16;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: #0eb3e6;
+    border-radius: 6px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 7px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1000;
+}
+ header.sticky{
+    background: #2f0574;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+ }
+header .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header .nav{
+    display: flex;
+    justify-content: center;align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin: 10px;
+}
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+header ul li a:hover{
+    background: #0eb3e6;
+    color: #2f0574;
+    box-shadow: 0px 0px 10px #0eb3e6;
+}
+
+header .action .searchBox{
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+}
+header .action .searchBox i{
+    font-size: 1.4em;
+    margin: 5px;
+    color: #222;
+}
+header .action .searchBox input{
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: #222;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .backg{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .backg .cont{
+width: 50%;
+height: 100%;
+}
+
+.banner .backg .cont h2{
+    font-size: 4em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .backg .cont p{
+    font-size: 1em;
+    color: #dbdbdb;
+    letter-spacing: 1px;
+}
+.banner .backg .cont a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #0eb3e6;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .backg .cont a:hover{
+background: #0eb3e6;
+border: none;
+color: #07164d;
+box-shadow: 0px 0px 10px #0eb3e6;
+}
+.banner .backg img{
+    width: 600px;
+}
+
+.about{
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .contentBox{
+    width: 50%;
+    margin: 20px;
+}
+.about .contentBox h2{
+    font-size: 3em;
+    font-weight: 700;
+    color: #fff;
+}
+.about .contentBox p{
+    max-width: 600px;
+    text-align: justify;
+    color: #dbdbdb;
+}
+.about .contentBox a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #0eb3e6;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.about .contentBox a:hover{
+background: #0eb3e6;
+border: none;
+color: #07164d;
+box-shadow: 0px 0px 10px #0eb3e6;
+}
+
+.games{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+.games h2{
+    color: #fff;
+    margin: 10px 0;
+}
+.games ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.games ul li{
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+
+}
+.games ul li.active{
+    background: #0eb3e6;
+    color: #07164d;
+    box-shadow: 0 0 10px #0eb3e6;
+}
+
+.games .cardBox{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.games .cardBox .card{
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #2f0574;
+    overflow: hidden;
+}
+.games .cardBox .card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.games .cardBox .card .context{
+    padding: 10px;
+}
+.games .cardBox .card .context h4{
+    color: #fff;
+    margin: 15px 0;
+}
+.games .cardBox .card .context .progress{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #2f0574;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.games .cardBox .card .context .progress span{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+    background: #0eb3e6;
+    box-shadow: 0 0 10px #0eb3e6;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.games .cardBox .card .info{
+    border-top: 2px solid #5b28ad; ;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.games .cardBox .card .info p{
+    font-size: 1em;
+    color: #fff;
+}
+.games .cardBox .card .info p span{
+    color: #0eb3e6;
+}
+.games .cardBox .card .info a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #0eb3e6;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.games .cardBox .card .info a:hover{
+background: #0eb3e6;
+border: none;
+color: #07164d;
+box-shadow: 0px 0px 10px #0eb3e6;
+}
+.games .cardBox .card.hide{
+    display: none;
+}
+
+.tournaments{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tournaments h2{
+    color: #fff;
+    margin: 10px 0;
+}
+.tournaments .boxbox{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tournaments .boxbox .box{
+    width: 350px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #2f0574;
+    overflow: hidden;
+}
+.tournaments .boxbox .box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.tournaments .boxbox .box .content{
+    padding: 10px;
+}
+.tournaments .boxbox .box .content h4{
+    color: #fff;
+    margin-top: 15px;
+}
+.tournaments .boxbox .box .content h4 span{
+    color: #0eb3e6;
+}
+.tournaments .boxbox .box .content p{
+    text-align: justify;
+    color: #dbdbdb;
+    margin-top: 10px;
+}
+.tournaments .boxbox .box .content .btn{
+    display: flex;
+    justify-content: space-between;
+}
+.tournaments .boxbox .box .content .watch{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background: #0eb3e6;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #07164d;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #0eb3e6;
+}
+.tournaments .boxbox .box .content .watch:hover{
+border: 1px solid #0eb3e6;
+background: none;
+color: #07164d;
+box-shadow: none;
+}
+.tournaments .boxbox .box .content .join{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #0eb3e6;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.tournaments .boxbox .box .content .join:hover{
+background: #0eb3e6;
+border: none;
+color: #07164d;
+box-shadow: 0px 0px 10px #0eb3e6;
+}
+
+.contact{
+    padding: 20px 100px;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact img{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.contact .form{
+    width: 50%;
+    margin: 30px;
+}
+.contact .form h1{
+    color: #fff;
+}
+.contact .form .inputBox{
+    margin: 10px 0;
+
+}
+.contact .form .inputBox p{
+    color: #fff;
+}
+.contact .form .inputBox input,
+.contact .form .inputBox textarea{
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    background: #2f0574;
+    min-height: 15px;
+    font-size: 1.1em;
+}
+.contact .form .inputBox textarea{
+    height: 150px;
+}
+.contact .form .inputBox input[type="submit"]{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    outline: none;
+    background: transparent;
+    border: 1px solid #0eb3e6;
+    text-decoration: none;
+    font-weight: 700;
+    width: 150px;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.contact .form .inputBox input[type="submit"]:hover{
+    background: #0eb3e6;
+    border: none;
+    color: #2f0574;
+    box-shadow: 0 0 10px #0eb3e6;
+}
+
+
+footer{
+    padding: 10px 100px;
+}
+footer .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .info .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+footer .info p{
+    color: #dbdbdb;
+}
+
+footer .info ul{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .info ul li{
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0eb3e6;
+}
+footer .info ul li:hover{
+    background: #0eb3e6;
+    border: none;
+    box-shadow: 0 0 10px #0eb3e6;
+}
+footer .info ul li a i{
+    font-size: 1.5em;
+    color: #fff;
+}
+footer .info ul li:hover a i{
+    color: #07164d;
+}
+
+
+
+@media (max-width: 991px)
+{
+    header{
+        padding: 15px 40px;
+    }
+    header .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #2f0574;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1000;
+    }
+    header .nav.active{
+        display: flex;
+    }
+    header .nav li{
+        margin: 20px 0;
+    }
+    header .nav li a{
+        font-size: 24px; 
+        margin: 10px 0;
+    }
+    .toggleMenu{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .toggleMenu.active{
+        background: url(close.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+    }
+    .banner .backg img{
+        position: absolute;
+    }
+    .banner .backg .cont{
+        width: 100%;
+        height: 100%;
+        background: rgb(27 33 65 / 50%);
+        padding: 20px;
+        z-index: 1;
+        border-radius: 10px;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about .contentBox{
+        width: 100%;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact img{
+        height: 100%;
+        width: 100%;
+    }
+    .contact .form h1{
+        text-align: center;
+    }
+    footer .info{
+        flex-direction: column;
+    }
+}
