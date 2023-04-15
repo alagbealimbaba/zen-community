@@ -606,4 +606,6 @@ footer .info ul li:hover a i{
     footer .info{
         flex-direction: column;
     }
+    .btn a{
+        display: flex;
 }
